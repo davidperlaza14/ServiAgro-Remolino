@@ -218,75 +218,93 @@ h2 {
 
 
 
-.nav__responsive-button-container {
-    position: absolute;
-    width: 100%;
-    font-size: 25px;
-    background-color: #69c;
-    margin-top: -64px;
-    z-index: 100;
-}
 
-
-.nav__responsive-button {
-    padding: 6px 20px;
-    text-align: right;
-    width: 100%;
+.menu-bar{
+    display: none;
 }
 
 
 @media (max-width:700px) {
+   .logo{
+       max-width: 200px;
+   }
 
-    .nav__ul {
-        display: none;
+    .nav{
+        height: 70vh;
     }
+    
 
-    .nav {
-        height: 37px;
-        width: 100%;
-    }
-
-    .nav__responsive-ul {
-        list-style-type: none;
+    .navbar .menu-bar{
+        
         display: block;
+        grid-column: 9 /10 ;
+        font-size: 2em ;
+        cursor: pointer;
+    }
+    .navbar .menu{
         position: absolute;
         width: 100%;
-
-        margin-top: 37px;
-        padding-top: 27;
-        height: 37px;
-
-    }
-
-    .nav__li-container {
-        position: relative;
-        top: -1000px;
-        height: calc(100vh - 64px);
-        background: #9bf transparent;
+        height: 70vh;
+        display: grid;
+        justify-content: space-evenly;
+        /* align-items: center; */
+        /* background-color: #edcb54; */
+        margin-top: 3.6em;
+        transform: translateX(5%);
         transition: all 1s;
-        z-index: 1;
-        width: 75%;
-
 
     }
+    .navbar .menu li{
+       margin-top: -100px;
+       align-items: center;
+    }
 
-    .nav__responsive-li {
+    .navbar .menu-toggle{
+        transform: translateX(-170%);
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .logo{
+        max-width: 300px;
+    }
+
+    .nav{
+        height: 0vh;
+    }
+    .navbar .menu-bar{
+        
+       margin-right: 400px;
+        font-size: 1.5em ;
+        cursor: pointer;
+    }
+    .navbar .menu{
+        position: absolute;
         width: 100%;
-        padding: 9px 20px;
+        height: 70vh;
+        display: grid;
+        justify-content: space-evenly;
+        /* align-items: center; */
+        background-color: #00ffff;
+        margin-top: 3.8em;
+        transform: translateX(-20%);
+        transition: all 1s;
 
     }
-
-    /* .nav__responsive-li i {} */
-
-    .nav__responsive-li a {
-        color: #016;
-        text-decoration: none;
+    .navbar .menu li{
+       margin-top: -100px;
+       align-items: center;
     }
 
-    .nav__responsive-ul:hover>.nav__li-container {
-        top: -27px;
+    .navbar .menu-toggle{
+        transform: translateX(-170%);
     }
 
+}
+  
+    
 
 
 
